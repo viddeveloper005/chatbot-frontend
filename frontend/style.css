@@ -120,12 +120,34 @@ html {
 
 /* Chat Input Section */
 
+
+/* 
 .chat-input-container {
     display: flex;
     align-items: center;
     padding: 10px 20px;
     background: #f1f5f9;
     border-top: 1px solid #e0e0e0;
+}
+     */
+
+.chatbot-input-main {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: #f1f5f9;
+    bottom: 0;
+}
+
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
 }
 
 .chat-input-container input {

@@ -57,7 +57,7 @@ function sendMessageFromPrompt(prompt) {
 
 // Function to fetch the bot's response from the API and handle errors
 function fetchBotResponse(userMessage) {
-    fetch('http://localhost:3000/chat', { // Replace with your API endpoint
+    fetch('https://chatbot-4-el9s.onrender.com/chat', { // Replace with your API endpoint
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
