@@ -36,6 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to handle sending messages from the text field
 function sendMessage() {
+    const chatWindow = document.getElementById("chat-window");
+    const chatWindowBottom = chatWindow.offsetTop + chatWindow.offsetHeight; // Calculate bottom position
+    window.scrollTo({
+        top: chatWindowBottom, // Scroll to the bottom of the chat window
+        behavior: 'smooth' // Smooth scrolling
+    });
     const userInput = document.getElementById('user-input').value.trim();
     if (userInput === '') return; // Check if the input is empty and return if true
 
@@ -51,6 +57,12 @@ function sendMessage() {
 
 // Function to handle sending predefined prompts from button clicks
 function sendMessageFromPrompt(prompt) {
+    const chatWindow = document.getElementById("chat-window");
+    const chatWindowBottom = chatWindow.offsetTop + chatWindow.offsetHeight; // Calculate bottom position
+    window.scrollTo({
+        top: chatWindowBottom, // Scroll to the bottom of the chat window
+        behavior: 'smooth' // Smooth scrolling
+    });
     displayMessage(prompt, 'user');
     fetchBotResponse(prompt);
 }
